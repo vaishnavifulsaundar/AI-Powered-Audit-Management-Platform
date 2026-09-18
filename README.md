@@ -1,2 +1,2 @@
 # AI-Powered-Audit-Management-Platform
-A project having RAG,LLM
+AI-Powered Audit Management Platform built with Angular, Node.js, PostgreSQL and RAG
