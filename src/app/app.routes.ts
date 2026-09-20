@@ -9,6 +9,7 @@ import { FindingsComponent } from './feature/findings/findings.component';
 import { AnalyticsComponent } from './feature/analytics/analytics.component';
 import { AiAssistantComponent } from './feature/ai-assistant/ai-assistant.component';
 import { LoginComponent } from './feature/auth/login/login.component';
+import { authGuard } from './feature/auth/auth.guard';
 
 export const routes: Routes = [
     {
@@ -18,7 +19,7 @@ export const routes: Routes = [
  {
     path: '',
     component: MainLayoutComponent,
-
+    canActivate: [authGuard],
     children: [
   {
     path: '',
