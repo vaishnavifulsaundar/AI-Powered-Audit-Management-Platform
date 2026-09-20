@@ -1,0 +1,30 @@
+.sidebar {
+  width: 240px;
+  height: 100%;
+
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+}
+
+.sidebar-title {
+  padding: 20px 16px 12px;
+
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  color: #6b7280;
+}
+
+mat-nav-list {
+  padding-top: 0;
+}
+
+a[mat-list-item] {
+  margin: 4px 8px;
+  border-radius: 8px;
+}
+
+a[mat-list-item]:hover {
+  background-color: #f3f4f6;
+}

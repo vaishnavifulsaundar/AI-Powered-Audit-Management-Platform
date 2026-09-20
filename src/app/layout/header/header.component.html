@@ -1,0 +1,61 @@
+<mat-toolbar class="app-header">
+
+        <div class="brand">
+        <span>AI Audit Management</span>
+     </div>
+
+       <div  class="header-actions">
+         <button mat-icon-button  aria-label="Notifications">
+              <mat-icon>notifications</mat-icon>
+         </button>
+
+
+           <!-- User Profile -->
+    <button
+      mat-button
+      [matMenuTriggerFor]="userMenu"
+      class="user-button">
+
+      <div class="user-profile">
+
+        <span class="user-name">
+          Vaishnavi
+        </span>
+
+        <span class="user-role">
+          Auditor
+        </span>
+
+      </div>
+
+      <mat-icon>
+        expand_more
+      </mat-icon>
+
+    </button>
+
+     <!-- User Menu -->
+    <mat-menu #userMenu="matMenu">
+
+      <button mat-menu-item>
+        <mat-icon>person</mat-icon>
+        <span>Profile</span>
+      </button>
+
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </button>
+
+      <button mat-menu-item>
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+
+    </mat-menu>
+
+
+
+       </div>
+
+</mat-toolbar>
