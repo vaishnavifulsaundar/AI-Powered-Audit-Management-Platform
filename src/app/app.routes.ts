@@ -10,6 +10,7 @@ import { AnalyticsComponent } from './feature/analytics/analytics.component';
 import { AiAssistantComponent } from './feature/ai-assistant/ai-assistant.component';
 import { LoginComponent } from './feature/auth/login/login.component';
 import { authGuard } from './feature/auth/auth.guard';
+import { roleGuard } from './feature/auth/role.guard';
 
 export const routes: Routes = [
     {
@@ -32,11 +33,19 @@ export const routes: Routes = [
   },
   {
     path: 'audits',
-    component: AuditsComponent
+    component: AuditsComponent,
+      canActivate: [roleGuard],
+      data: {
+          roles: ['Admin', 'Auditor', 'Reviewer']
+        }
   },
   {
     path: 'accounts',
-    component: AccountsComponent
+    component: AccountsComponent,
+      canActivate: [roleGuard],
+       data: {
+          roles: ['Admin']
+        }
   },
   {
     path: 'sampling',
