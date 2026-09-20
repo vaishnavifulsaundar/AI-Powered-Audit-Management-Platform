@@ -28,3 +28,12 @@ a[mat-list-item] {
 a[mat-list-item]:hover {
   background-color: #f3f4f6;
 }
+
+a[mat-list-item].active {
+  background-color: #e8eaf6;
+  color: #3f51b5;
+}
+
+a[mat-list-item].active mat-icon {
+  color: #3f51b5;
+}
